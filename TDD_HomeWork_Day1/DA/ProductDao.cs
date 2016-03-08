@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using TDD_HomeWork_Day1.model;
-
+using TDD_HomeWork_Day1.Interface;
 namespace TDD_HomeWork_Day1.DA
 {
-    public class ProductDao 
+    public class ProductDao : IProductDao
     {
         public IEnumerable<Product> GetData()
         {

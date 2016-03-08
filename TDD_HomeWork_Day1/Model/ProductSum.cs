@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using TDD_HomeWork_Day1.model;
-
+using TDD_HomeWork_Day1.Interface;
 namespace TDD_HomeWork_Day1_Tests
 {
     public class ProductSum
     {
-        private IEnumerable<Product> productList;
+        private IProductDao productList;
 
-        public ProductSum(IEnumerable<Product> productList)
+        public ProductSum(IProductDao productList)
         {
             this.productList = productList;
         }
@@ -20,7 +20,7 @@ namespace TDD_HomeWork_Day1_Tests
         /// <returns></returns>
         public List<int> GetSum(ProductColume colume, int groupCnt)
         {
-            //TODO：依據傳入欄位、數量做群組並計算該欄位總和
+            //TODO：依據傳入欄位、數量做群組並計算該欄位總和，處理的資料來源為ctor裡面的productList
             switch (colume)
             {
                 case ProductColume.Id:
