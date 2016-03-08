@@ -46,7 +46,7 @@
     <Compile Include="Interface\IProductDao.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="DA\ProductDao.cs" />
-    <Compile Include="Model\ProductColume.cs" />
+    <Compile Include="Model\ProductColumn.cs" />
     <Compile Include="Model\ProductSum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
