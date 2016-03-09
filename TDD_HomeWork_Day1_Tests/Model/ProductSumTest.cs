@@ -14,13 +14,13 @@ namespace TDD_HomeWork_Day1_Tests.Model
         public void Sum_Product_Cost_GroupBy3()
         {
             //arrange
-            IProductDao target = Substitute.For<IProductDao>();
-            target.GetData().Returns(GetProductTestData());
+            IProductDao productList = Substitute.For<IProductDao>();
+            productList.GetData().Returns(GetProductTestData());
             int groupCnt = 3;
             var column = ProductColumn.Cost;
             var expected = new List<int> {6, 15, 24, 21};
             //act
-            var actual = target.GetSum(column, groupCnt);
+            var actual = productList.GetSum(column, groupCnt);
             //assert
             CollectionAssert.AreEqual(expected, actual);
         }
@@ -31,13 +31,13 @@ namespace TDD_HomeWork_Day1_Tests.Model
         public void Sum_Product_Revenue_GroupBy4()
         {
             //arrange
-            IProductDao target = Substitute.For<IProductDao>();
-            target.GetData().Returns(GetProductTestData());
+            IProductDao productList = Substitute.For<IProductDao>();
+            productList.GetData().Returns(GetProductTestData());
             int groupCnt = 4;
             var column = ProductColumn.Revenue;
             var expected = new List<int> { 50, 66, 60 };
             //act
-            List<int> actual = target.GetSum(column, groupCnt);
+            List<int> actual = productList.GetSum(column, groupCnt);
             //assert
             CollectionAssert.AreEqual(expected, actual);
         }
